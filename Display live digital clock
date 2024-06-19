@@ -1,0 +1,22 @@
+from tkinter import *
+from tkinter.ttk import *
+from time import strftime
+
+root = Tk()
+root.title("clock")
+
+def time():
+    string = strftime("%I:%M:%S %p")
+    # I = It shows 12 hours time
+    # H = It shows 24 hours time
+    # p = pm
+    # a = am
+    abe1.config(text=string)
+    abe1.after(1000, time)
+
+abe1 = Label(root, font=("ds-digital", 90), background="gray", foreground="black")
+# your wish to change font colors with correct names or codes
+abe1.pack(anchor="center")
+time()
+
+mainloop()
