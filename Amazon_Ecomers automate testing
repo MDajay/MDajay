@@ -1,0 +1,18 @@
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+
+service_obj = Service("C:\\chromedriver-win64\\chromedriver.exe")
+driver = webdriver.Chrome(service=service_obj)
+driver.get("https://www.amazon.in")
+driver.find_element(By.XPATH, "/html/body/div[1]/header/div/div[1]/div[3]/div/a[2]").click()
+print(driver.title)
+print(driver.current_url)
+driver.find_element(By.CSS_SELECTOR, "input[name='email']").send_keys("drajaysai114@gmail.com")
+driver.find_element(By.CSS_SELECTOR, "input[type='submit']").click()
+driver.find_element(By.CSS_SELECTOR, "input[type='password']").send_keys("123456789")
+#driver.find_element(By.CSS_SELECTOR, "span[id='auth-signin-button']").click()
+#driver.refresh()
+#driver.find_element(By.CSS_SELECTOR, "input[id='twotabsearchtextbox']").send_keys("toys")
+#driver.find_element(By.CSS_SELECTOR, "input[id='nav-search-submit-button']").click()
+#driver.find_element(By.XPATH,"/html/body/div[1]/div[2]/div[1]/div[1]/div/span[3]/div[2]/div[3]/div/div/div/div/div/div/div[3]/div[1]/h2").click()
