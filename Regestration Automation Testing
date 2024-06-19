@@ -1,0 +1,12 @@
+import time
+import selenium
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+
+service_obj = Service("C:\\chromedriver-win64\\chromedriver.exe")
+driver = webdriver.Chrome(service=service_obj)
+driver.get("https://demo.automationtesting.in/Register.html")
+#driver.find_element(By.XPATH, "//input[@type='email']").send_keys("ajaysai119@gmail.com")
+
